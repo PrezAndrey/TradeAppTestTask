@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		55DDB8CE2A0FE8CB002C7F50 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DDB8CD2A0FE8CB002C7F50 /* AppDelegate.swift */; };
 		55DDB8D02A0FE8CB002C7F50 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DDB8CF2A0FE8CB002C7F50 /* SceneDelegate.swift */; };
-		55DDB8D22A0FE8CB002C7F50 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DDB8D12A0FE8CB002C7F50 /* ViewController.swift */; };
 		55DDB8D52A0FE8CB002C7F50 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55DDB8D32A0FE8CB002C7F50 /* Main.storyboard */; };
 		55DDB8D72A0FE8CC002C7F50 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55DDB8D62A0FE8CC002C7F50 /* Assets.xcassets */; };
 		55DDB8DA2A0FE8CC002C7F50 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55DDB8D82A0FE8CC002C7F50 /* LaunchScreen.storyboard */; };
@@ -17,13 +16,15 @@
 		55DDB8E62A0FECBD002C7F50 /* TopChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DDB8E52A0FECBD002C7F50 /* TopChartViewController.swift */; };
 		55DDB8E82A0FEEBC002C7F50 /* TradeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DDB8E72A0FEEBB002C7F50 /* TradeViewController.swift */; };
 		55DDB8EB2A0FF330002C7F50 /* CurrencyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DDB8EA2A0FF330002C7F50 /* CurrencyViewController.swift */; };
+		55DDB8EE2A100264002C7F50 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DDB8ED2A100264002C7F50 /* Color.swift */; };
+		55DDB8F32A104978002C7F50 /* Trader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DDB8F22A104978002C7F50 /* Trader.swift */; };
+		55DDB8F92A105E65002C7F50 /* TraderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DDB8F82A105E65002C7F50 /* TraderTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		55DDB8CA2A0FE8CA002C7F50 /* TradeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TradeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		55DDB8CD2A0FE8CB002C7F50 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		55DDB8CF2A0FE8CB002C7F50 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		55DDB8D12A0FE8CB002C7F50 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		55DDB8D42A0FE8CB002C7F50 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		55DDB8D62A0FE8CC002C7F50 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		55DDB8D92A0FE8CC002C7F50 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -32,6 +33,9 @@
 		55DDB8E52A0FECBD002C7F50 /* TopChartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopChartViewController.swift; sourceTree = "<group>"; };
 		55DDB8E72A0FEEBB002C7F50 /* TradeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradeViewController.swift; sourceTree = "<group>"; };
 		55DDB8EA2A0FF330002C7F50 /* CurrencyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyViewController.swift; sourceTree = "<group>"; };
+		55DDB8ED2A100264002C7F50 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		55DDB8F22A104978002C7F50 /* Trader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trader.swift; sourceTree = "<group>"; };
+		55DDB8F82A105E65002C7F50 /* TraderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TraderTableViewCell.swift; path = "TradeApp/Main Screen/Trade Screen/TraderTableViewCell.swift"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,11 +68,11 @@
 		55DDB8CC2A0FE8CA002C7F50 /* TradeApp */ = {
 			isa = PBXGroup;
 			children = (
+				55DDB8EC2A100252002C7F50 /* Extention */,
 				55DDB8E42A0FEB9F002C7F50 /* Main Screen */,
 				55DDB8E12A0FEA8C002C7F50 /* Greeting Screen */,
 				55DDB8CD2A0FE8CB002C7F50 /* AppDelegate.swift */,
 				55DDB8CF2A0FE8CB002C7F50 /* SceneDelegate.swift */,
-				55DDB8D12A0FE8CB002C7F50 /* ViewController.swift */,
 				55DDB8D32A0FE8CB002C7F50 /* Main.storyboard */,
 				55DDB8D62A0FE8CC002C7F50 /* Assets.xcassets */,
 				55DDB8D82A0FE8CC002C7F50 /* LaunchScreen.storyboard */,
@@ -88,8 +92,8 @@
 		55DDB8E42A0FEB9F002C7F50 /* Main Screen */ = {
 			isa = PBXGroup;
 			children = (
+				55DDB8EF2A104932002C7F50 /* Top Screen */,
 				55DDB8E92A0FF2FE002C7F50 /* Trade Screen */,
-				55DDB8E52A0FECBD002C7F50 /* TopChartViewController.swift */,
 			);
 			path = "Main Screen";
 			sourceTree = "<group>";
@@ -101,6 +105,48 @@
 				55DDB8EA2A0FF330002C7F50 /* CurrencyViewController.swift */,
 			);
 			path = "Trade Screen";
+			sourceTree = "<group>";
+		};
+		55DDB8EC2A100252002C7F50 /* Extention */ = {
+			isa = PBXGroup;
+			children = (
+				55DDB8ED2A100264002C7F50 /* Color.swift */,
+			);
+			path = Extention;
+			sourceTree = "<group>";
+		};
+		55DDB8EF2A104932002C7F50 /* Top Screen */ = {
+			isa = PBXGroup;
+			children = (
+				55DDB8F72A105E3F002C7F50 /* View */,
+				55DDB8F12A10495F002C7F50 /* Model */,
+				55DDB8F02A10494A002C7F50 /* Controller */,
+			);
+			path = "Top Screen";
+			sourceTree = "<group>";
+		};
+		55DDB8F02A10494A002C7F50 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				55DDB8E52A0FECBD002C7F50 /* TopChartViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		55DDB8F12A10495F002C7F50 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				55DDB8F22A104978002C7F50 /* Trader.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		55DDB8F72A105E3F002C7F50 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				55DDB8F82A105E65002C7F50 /* TraderTableViewCell.swift */,
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -174,13 +220,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				55DDB8D22A0FE8CB002C7F50 /* ViewController.swift in Sources */,
 				55DDB8CE2A0FE8CB002C7F50 /* AppDelegate.swift in Sources */,
+				55DDB8F32A104978002C7F50 /* Trader.swift in Sources */,
 				55DDB8E32A0FEB4E002C7F50 /* StartingViewController.swift in Sources */,
+				55DDB8EE2A100264002C7F50 /* Color.swift in Sources */,
 				55DDB8EB2A0FF330002C7F50 /* CurrencyViewController.swift in Sources */,
 				55DDB8E82A0FEEBC002C7F50 /* TradeViewController.swift in Sources */,
 				55DDB8D02A0FE8CB002C7F50 /* SceneDelegate.swift in Sources */,
 				55DDB8E62A0FECBD002C7F50 /* TopChartViewController.swift in Sources */,
+				55DDB8F92A105E65002C7F50 /* TraderTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
