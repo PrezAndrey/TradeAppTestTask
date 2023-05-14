@@ -10,23 +10,40 @@ import UIKit
 class TopChartViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
-    let topTraders: [Trader] = [
-        Trader(country: nil, name: "Oliver", deposit: 2367, profit: 336755),
-        Trader(country: nil, name: "Jack", deposit: 3645, profit: 345666),
-        Trader(country: nil, name: "Hurry", deposit: 7685, profit: 456899),
-        Trader(country: nil, name: "Jacob", deposit: 4567, profit: 678844),
-        Trader(country: nil, name: "Charlie", deposit: 5678, profit: 346789),
-        Trader(country: nil, name: "Thomas", deposit: 2457, profit: 345678),
-        Trader(country: nil, name: "George", deposit: 76545, profit: 45679),
-        Trader(country: nil, name: "Oscar", deposit: 345689, profit: 4535678),
-        Trader(country: nil, name: "James", deposit: 8765, profit: 456785),
-        Trader(country: nil, name: "Wiliam", deposit: 87445, profit: 4567898)
+    
+    var topTraders: [Trader] = [
+        Trader(country: UIImage(named: "226-united-states"), name: "Oliver", deposit: 2367, profit: 336),
+        Trader(country: UIImage(named: "243-canada"), name: "Jack", deposit: 3645, profit: 34),
+        Trader(country: UIImage(named: "255-brazil"), name: "Hurry", deposit: 7685, profit: 45),
+        Trader(country: UIImage(named: "094-south-korea"), name: "Jacob", deposit: 4567, profit: 67),
+        Trader(country: UIImage(named: "162-germany"), name: "Charlie", deposit: 5678, profit: 346),
+        Trader(country: UIImage(named: "255-brazil"), name: "Thomas", deposit: 2457, profit: 345),
+        Trader(country: UIImage(named: "195-france"), name: "George", deposit: 76545, profit: 4567),
+        Trader(country: UIImage(named: "121-new-zealand"), name: "Oscar", deposit: 345689, profit: 453),
+        Trader(country: UIImage(named: "246-india"), name: "James", deposit: 8765, profit: 456),
+        Trader(country: UIImage(named: "128-spain"), name: "Wiliam", deposit: 87445, profit: 45)
     ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
+      
+        executeRepeatedly()
+    }
+    private func executeRepeatedly() {
+        
+        changeProfit()
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 6.0) { [weak self] in
+            self?.executeRepeatedly()
+        }
     }
     
+   func changeProfit() {
+        let step = Int.random(in: 50...150)
+        let index = Int.random(in: 0..<topTraders.count)
+        topTraders[index].profit += step
+        tableView.reloadData()
+    }
 }
 
 extension TopChartViewController: UITableViewDelegate, UITableViewDataSource {
@@ -38,6 +55,8 @@ extension TopChartViewController: UITableViewDelegate, UITableViewDataSource {
         cell.name.text = topTraders[indexPath.row].name
         cell.deposit.text = "$\(topTraders[indexPath.row].deposit)"
         cell.profit.text = "$\(topTraders[indexPath.row].profit)"
+        cell.country.image = topTraders[indexPath.row].country
+        cell.cellView?.backgroundColor = indexPath.row % 2 == 0 ? UIColor.theme.topGray : UIColor.theme.tradeLightGray
     
         return cell
     }

@@ -9,10 +9,11 @@ import UIKit
 
 class TraderTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var cellView: UIView!
     @IBOutlet weak var profit: UILabel!
     @IBOutlet weak var deposit: UILabel!
     @IBOutlet weak var name: UILabel!
-    @IBOutlet weak var country: UILabel!
+    @IBOutlet weak var country: UIImageView!
     @IBOutlet weak var num: UILabel!
     
     override func awakeFromNib() {

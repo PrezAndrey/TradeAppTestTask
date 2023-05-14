@@ -11,6 +11,7 @@ struct Trader {
     
     let country: UIImage?
     let name: String
-    var deposit: Double
-    var profit: Double
+    var deposit: Int
+    var profit: Int
+    
 }
