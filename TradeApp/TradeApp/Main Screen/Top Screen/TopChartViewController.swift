@@ -32,8 +32,7 @@ class TopChartViewController: UIViewController {
     private func executeRepeatedly() {
         
         changeProfit()
-        
-        DispatchQueue.main.asyncAfter(deadline: .now() + 6.0) { [weak self] in
+        DispatchQueue.main.asyncAfter(deadline: .now() + 180.0) { [weak self] in
             self?.executeRepeatedly()
         }
     }
@@ -63,6 +62,10 @@ extension TopChartViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return topTraders.count
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 50
     }
 }
 
